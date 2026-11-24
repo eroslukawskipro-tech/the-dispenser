@@ -1,1 +1,186 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>THE DISPENSER | CBD Selection</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f5f2e9;color:#19251c}
+header{background:#142019;color:#f5f2e9;padding:22px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Georgia,serif;font-size:22px;letter-spacing:3px}
+.logo span{color:#c6a66b}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:13px}
+.hero{background:#142019;color:white;padding:100px 9%;display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:500px}
+.hero h1{font:70px Georgia,serif;line-height:1.05}
+.hero h1 span{color:#c6a66b}
+.hero p{color:#c5cabe;line-height:1.8;margin:25px 0;max-width:430px}
+.btn{display:inline-block;background:#c6a66b;color:#172219;padding:15px 24px;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+.hero-art{border:1px solid #c6a66b;padding:65px 35px;text-align:center;transform:rotate(3deg)}
+.hero-art strong{font:30px Georgia,serif;display:block}
+.hero-art small{letter-spacing:4px;color:#c6a66b}
+section{padding:80px 9%}
+h2{font:42px Georgia,serif;margin:15px 0 35px}
+h2 span{color:#a78a55}
+.subtitle{color:#85877d;letter-spacing:3px;font-size:11px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{background:white}
+.visual{height:230px;display:grid;place-items:center;color:#f5f2e9;font:90px Georgia,serif}
+.one{background:linear-gradient(140deg,#89977a,#263c2b)}
+.two{background:linear-gradient(140deg,#b39b70,#59462f)}
+.three{background:linear-gradient(140deg,#b4b58d,#526147)}
+.info{padding:22px}
+.info small{color:#a78a55;letter-spacing:2px}
+.info h3{font:23px Georgia,serif;margin:12px 0}
+.info p{font-size:12px;color:#777;line-height:1.7}
+.info button{margin-top:18px;background:#19251c;color:white;border:0;padding:12px 15px;cursor:pointer}
+.story{background:#19251c;color:white}
+.story p{max-width:650px;color:#c4cabe;line-height:2}
+.values{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:40px}
+.values h3{font:22px Georgia,serif;margin:15px 0}
+.values p{font-size:13px;color:#777;line-height:1.8}
+.faq details{padding:20px 0;border-bottom:1px solid #ddd}
+.faq summary{cursor:pointer;font-weight:bold}
+.faq details p{padding-top:15px;color:#777;line-height:1.8}
+.contact{background:#e8e6db;text-align:center}
+footer{background:#111a14;color:#ccc;padding:35px 8%;text-align:center;font-size:11px;line-height:2}
+footer a{color:#c6a66b}
+#gate{position:fixed;inset:0;background:#101a14f5;z-index:10;display:grid;place-items:center;padding:20px}
+.gatebox{background:#f5f2e9;padding:40px;max-width:420px;text-align:center}
+.gatebox h2{font-size:35px}
+.gatebox p{line-height:1.7;color:#777;margin:20px 0}
+.gatebox button{margin:5px}
+#gate.hidden{display:none}
+@media(max-width:700px){
+ header{flex-wrap:wrap;gap:15px}
+ nav{width:100%;display:flex;gap:15px;flex-wrap:wrap}
+ nav a{margin:0}
+ .hero{padding:65px 8%;display:block}
+ .hero h1{font-size:55px}
+ .hero-art{margin:45px auto 0;max-width:300px}
+ section{padding:65px 8%}
+ h2{font-size:35px}
+ .products,.values{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div id="gate">
+ <div class="gatebox">
+  <div class="logo">THE <span>DISPENSER</span></div>
+  <h2>Bienvenue.</h2>
+  <p>Ce site est destiné aux personnes majeures. As-tu 18 ans ou plus ?</p>
+  <button class="btn" onclick="enter()">OUI, J'AI 18 ANS</button>
+  <button class="btn" onclick="document.querySelector('.gatebox').innerHTML='<h2>Accès refusé</h2><p>Site réservé aux majeurs.</p>'">NON</button>
+ </div>
+</div>
+
+<header>
+ <div class="logo">THE <span>DISPENSER</span></div>
+ <nav>
+  <a href="#accueil">Accueil</a>
+  <a href="#boutique">Boutique</a>
+  <a href="#marque">La marque</a>
+  <a href="#contact">Contact</a>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+ <div>
+  <div class="subtitle">CBD SELECTION · FRANCE</div>
+  <h1>Le choix du<br><span>naturel.</span></h1>
+  <p>Bienvenue dans l'univers THE DISPENSER. Une identité premium, une sélection soignée et une exigence de transparence.</p>
+  <a href="#boutique" class="btn">DÉCOUVRIR</a>
+ </div>
+ <div class="hero-art">
+  <small>EST. 2026</small>
+  <strong>THE<br>DISPENSER</strong>
+  <p>SELECTED WITH CARE</p>
+ </div>
+</section>
+
+<section id="boutique">
+ <div class="subtitle">NOTRE SÉLECTION</div>
+ <h2>La boutique<span>.</span></h2>
+ <div class="products">
+  <article class="product">
+   <div class="visual one">✳</div>
+   <div class="info">
+    <small>01 / FLEURS</small>
+    <h3>Fleurs CBD</h3>
+    <p>Découvrez notre univers de fleurs sélectionnées. Origine et analyses à préciser par lot.</p>
+    <button disabled>Bientôt disponible</button>
+   </div>
+  </article>
+  <article class="product">
+   <div class="visual two">◈</div>
+   <div class="info">
+    <small>02 / RÉSINES</small>
+    <h3>Résines CBD</h3>
+    <p>Une sélection de résines avec composition et certificats à consulter.</p>
+    <button disabled>Bientôt disponible</button>
+   </div>
+  </article>
+  <article class="product">
+   <div class="visual three">◉</div>
+   <div class="info">
+    <small>03 / HUILES</small>
+    <h3>Huiles CBD</h3>
+    <p>Des références présentées avec leurs caractéristiques et analyses.</p>
+    <button disabled>Bientôt disponible</button>
+   </div>
+  </article>
+ </div>
+ <p style="margin-top:25px;color:#777;font-size:11px">Catalogue de démonstration : aucune commande ni aucun paiement n'est activé.</p>
+</section>
+
+<section class="story" id="marque">
+ <div class="subtitle">NOTRE PHILOSOPHIE</div>
+ <h2>Moins de bruit.<br><span>Plus de sens.</span></h2>
+ <p>THE DISPENSER est une marque construite autour de la transparence, de la traçabilité et du souci du détail. Notre ambition : proposer une expérience claire et professionnelle.</p>
+ <div class="values">
+  <div><h3>01. Traçabilité</h3><p>Une origine identifiable pour chaque référence.</p></div>
+  <div><h3>02. Qualité</h3><p>Des analyses correspondant aux lots proposés.</p></div>
+  <div><h3>03. Transparence</h3><p>Des informations précises et vérifiables.</p></div>
+ </div>
+</section>
+
+<section class="faq">
+ <div class="subtitle">INFORMATIONS</div>
+ <h2>Questions fréquentes<span>.</span></h2>
+ <details><summary>Qu'est-ce que le CBD ?</summary><p>Le cannabidiol est un cannabinoïde présent dans le chanvre. Aucune propriété médicale n'est revendiquée ici.</p></details>
+ <details><summary>Peut-on commander ?</summary><p>Non, cette version est une maquette. La vente sera envisagée après validation réglementaire et opérationnelle.</p></details>
+ <details><summary>Comment vérifier les produits ?</summary><p>Les certificats d'analyse, la composition et l'origine devront être consultables pour chaque lot.</p></details>
+</section>
+
+<section class="contact" id="contact">
+ <div class="subtitle">RESTONS EN CONTACT</div>
+ <h2>Parlons de <span>votre projet.</span></h2>
+ <p>Une question sur THE DISPENSER ? Contactez-nous.</p>
+ <br>
+ <a class="btn" href="mailto:contact@exemple.fr">NOUS CONTACTER ↗</a>
+</section>
+</main>
+
+<footer>
+ <div class="logo">THE <span>DISPENSER</span></div>
+ <p>© 2026 THE DISPENSER — Tous droits réservés.</p>
+ <p>Site vitrine de démonstration. Compléter les mentions légales, coordonnées, CGV et politique de confidentialité avant publication commerciale. Vérifier la conformité de chaque produit CBD.</p>
+ <p><a href="mailto:contact@exemple.fr">Contact</a></p>
+</footer>
+
+<script>
+function enter(){
+ sessionStorage.setItem('td-age','yes');
+ document.getElementById('gate').classList.add('hidden');
+}
+if(sessionStorage.getItem('td-age')==='yes'){
+ document.getElementById('gate').classList.add('hidden');
+}
+</script>
+</body>
+</html>
+
