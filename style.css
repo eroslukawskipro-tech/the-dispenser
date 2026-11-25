@@ -413,3 +413,69 @@ footer .legal { max-width: 650px; margin: 20px auto 0; line-height: 1.8; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
 }
+
+/* THE DISPENSER — PREMIUM HEADER UPDATE */
+
+.header {
+  min-height: 105px;
+  height: auto;
+  padding: 20px 6%;
+  gap: 30px;
+}
+
+.logo {
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.logo span {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.logo small {
+  margin-top: 9px;
+  letter-spacing: 3px;
+}
+
+.header nav {
+  align-items: center;
+  gap: clamp(15px, 2.5vw, 38px);
+}
+
+.header nav a {
+  white-space: nowrap;
+  color: var(--cream);
+  transition: color .25s ease;
+}
+
+.header nav a:hover {
+  color: var(--gold);
+}
+
+.header-link {
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 13px 17px;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+@media(max-width: 800px) {
+  .header {
+    min-height: 82px;
+    padding: 15px 5%;
+  }
+
+  .header nav {
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+}
