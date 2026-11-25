@@ -1,30 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#061009">
+  <meta name="description" content="THE DISPENSER, sélection CBD premium : fleurs, résines et huiles.">
   <title>THE DISPENSER — CBD Culture</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
-  <div class="topbar">
-    THE DISPENSER — CBD CULTURE & PREMIUM SELECTION
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="leaflet" vector-effect="non-scaling-stroke">
+        <path vector-effect="non-scaling-stroke" d="M0 0C-7 -14 -7 -38 0 -66C7 -38 7 -14 0 0Z"/>
+        <path vector-effect="non-scaling-stroke" d="M0 -4V-52" opacity=".5"/>
+      </g>
+      <symbol id="leaf" viewBox="-75 -72 150 125">
+        <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round">
+          <use href="#leaflet"/>
+          <use href="#leaflet" transform="rotate(-30) scale(.92)"/>
+          <use href="#leaflet" transform="rotate(30) scale(.92)"/>
+          <use href="#leaflet" transform="rotate(-58) scale(.75)"/>
+          <use href="#leaflet" transform="rotate(58) scale(.75)"/>
+          <use href="#leaflet" transform="rotate(-84) scale(.5)"/>
+          <use href="#leaflet" transform="rotate(84) scale(.5)"/>
+          <path vector-effect="non-scaling-stroke" d="M0 0V46"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="age-gate" id="gate">
+    <div class="gate-box">
+      <p class="eyebrow">ACCÈS RÉSERVÉ</p>
+      <div class="gate-leaf"><svg class="leaf-icon"><use href="#leaf"/></svg></div>
+      <h2>ÊTES-VOUS <span>MAJEUR ?</span></h2>
+      <p>Ce site est réservé aux personnes de 18 ans et plus.</p>
+      <button class="btn" id="age-yes">J'AI 18 ANS OU PLUS</button>
+      <button class="age-no" id="age-no">J'AI MOINS DE 18 ANS</button>
+    </div>
   </div>
 
+  <div class="announcement">THE DISPENSER — CBD CULTURE & PREMIUM SELECTION</div>
+
   <header class="header">
-    <a href="#home" class="brand">
-      <span class="brand-leaf">✳</span>
-      <span class="brand-name">THE <b>DISPENSER</b></span>
+    <a href="#home" class="logo">
+      <span class="logo-leaf"><svg class="leaf-icon"><use href="#leaf"/></svg></span>
+      <span class="logo-name">THE <b>DISPENSER</b></span>
       <small>EST. 2026 · CBD CULTURE</small>
     </a>
 
-    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu">☰</button>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
 
     <nav id="main-nav">
       <a href="#home">Accueil</a>
@@ -33,62 +64,104 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <a href="#collection" class="header-button">DÉCOUVRIR ↗</a>
+    <a href="#collection" class="header-link">DÉCOUVRIR ↗</a>
   </header>
 
   <main>
     <section class="hero" id="home">
+      <div class="hero-leaf"><svg class="leaf-icon"><use href="#leaf"/></svg></div>
+
       <div class="hero-content">
-        <p class="eyebrow">CANNABIS CULTURE · CBD SELECTION</p>
-
+        <p class="eyebrow">CBD CULTURE · PREMIUM SELECTION</p>
         <h1>THE ART OF<br><span>GREEN.</span></h1>
-
-        <p class="description">
+        <p class="hero-description">
           Une identité. Une culture. Une sélection.
           Découvrez l'univers THE DISPENSER.
         </p>
-
-        <a href="#collection" class="main-button">
-          EXPLORER L'UNIVERS <span>↗</span>
-        </a>
-
-        <p class="tagline">UNE AUTRE VISION DU CBD.</p>
+        <a href="#collection" class="btn">EXPLORER L'UNIVERS ↗</a>
+        <p class="hero-caption">UNE AUTRE VISION DU CBD.</p>
       </div>
 
-      <div class="green-house">
-        <span>✳</span>
+      <div class="hero-stamp">
+        <svg class="leaf-icon"><use href="#leaf"/></svg>
         THE<br>GREEN<br>HOUSE
       </div>
     </section>
 
-    <section class="collection" id="collection">
-      <p class="eyebrow">THE DISPENSER SELECTION</p>
-      <h2>Explorez nos <span>univers.</span></h2>
-
-      <div class="products">
-        <article><h3>FLOWERS</h3><p>Les fleurs CBD</p></article>
-        <article><h3>RESINS</h3><p>Les résines CBD</p></article>
-        <article><h3>OILS</h3><p>Les huiles CBD</p></article>
-      </div>
-      <p class="notice">Catalogue en préparation. Produits et conformité à confirmer avant commercialisation.</p>
+    <section class="intro">
+      <p class="eyebrow">WELCOME</p>
+      <h2>Le CBD, <span>autrement.</span></h2>
+      <p>Une sélection exigeante, un univers soigné, pensés pour ceux qui aiment le détail.</p>
     </section>
 
-    <section class="story" id="story">
+    <section class="collection" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE DISPENSER SELECTION</p>
+          <h2>Explorez nos <span>univers.</span></h2>
+        </div>
+        <p>Trois familles, une même exigence.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image flowers"><span>01</span></div>
+          <div class="product-info">
+            <h3>Flowers</h3>
+            <p>Les fleurs CBD, sélectionnées avec soin.</p>
+            <a href="#collection">BIENTÔT ↗</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image resins"><span>02</span></div>
+          <div class="product-info">
+            <h3>Resins</h3>
+            <p>Les résines CBD, texture et arômes intenses.</p>
+            <a href="#collection">BIENTÔT ↗</a>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image oils"><span>03</span></div>
+          <div class="product-info">
+            <h3>Oils</h3>
+            <p>Les huiles CBD, pour un usage simple au quotidien.</p>
+            <a href="#collection">BIENTÔT ↗</a>
+          </div>
+        </article>
+      </div>
+      <p class="catalogue-note">Catalogue en préparation. Produits et conformité à confirmer avant commercialisation.</p>
+    </section>
+
+    <section class="manifesto" id="story">
       <p class="eyebrow">OUR IDENTITY</p>
-      <h2>Rooted in <span>cannabis culture.</span></h2>
+      <h2>Rooted in <span>hemp culture.</span></h2>
       <p>Une marque inspirée par la culture du chanvre, le design et l'exigence du détail.</p>
+    </section>
+
+    <section class="values">
+      <p class="eyebrow">OUR VALUES</p>
+      <h2>Ce qui nous guide.</h2>
+      <div class="value-grid">
+        <article><span>01</span><h3>SÉLECTION</h3><p>Des produits choisis un par un, sans compromis.</p></article>
+        <article><span>02</span><h3>TRANSPARENCE</h3><p>Des informations claires sur chaque produit.</p></article>
+        <article><span>03</span><h3>CULTURE</h3><p>Un univers de marque pensé comme une signature.</p></article>
+      </div>
     </section>
 
     <section class="contact" id="contact">
       <p class="eyebrow">STAY CONNECTED</p>
       <h2>Welcome to <span>the green side.</span></h2>
-      <a href="mailto:contact@thedispenser.fr" class="main-button">CONTACT ↗</a>
+      <p>Une question, un projet, une demande ? Écris-nous.</p>
+      <a href="mailto:contact@thedispenser.fr" class="btn">CONTACT ↗</a>
     </section>
   </main>
 
   <footer>
-    THE DISPENSER · CBD CULTURE · 2026
-    <p>Site réservé aux adultes. Les produits commercialisés devront respecter la réglementation applicable.</p>
+    <a href="#home" class="logo footer-logo">
+      <span class="logo-name">THE <b>DISPENSER</b></span>
+    </a>
+    <p>THE DISPENSER · CBD CULTURE · 2026</p>
+    <p class="legal">Site réservé aux adultes. Les produits commercialisés devront respecter la réglementation applicable.</p>
   </footer>
 
 </body>
