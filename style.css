@@ -1,331 +1,40 @@
+/* ===== THEME PREMIUM ===== */
+.leaf-icon{display:block;width:100%;height:100%;fill:none}
 
-:root {
-  --black: #050b07;
-  --green: #0c2415;
-  --gold: #d1ad6d;
-  --cream: #f0ecdf;
-  --muted: #aab0a4;
-}
+.logo-leaf{width:50px;height:42px;margin-left:85px;font-size:0}
+.gate-leaf{width:80px;height:66px;margin:20px auto}
+.hero-stamp .leaf-icon{width:38px;height:32px;margin-bottom:8px}
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  background: var(--black);
-  color: var(--cream);
-  font-family: 'DM Sans', sans-serif;
-}
-
-a { text-decoration: none; color: inherit; }
-
-.topbar {
-  height: 31px;
-  background: var(--gold);
-  color: #10150e;
-  text-align: center;
-  padding: 8px;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.header {
-  min-height: 165px;
-  padding: 20px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  background: #050d08;
-  border-bottom: 1px solid #354331;
-  position: relative;
-  z-index: 10;
-}
-
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-.brand-leaf {
-  color: var(--gold);
-  font-size: 48px;
-  line-height: 1;
-}
-
-.brand-name {
-  font: 600 32px 'Cormorant Garamond', serif;
-  letter-spacing: 2px;
-}
-
-.brand-name b { color: var(--gold); }
-
-.brand small {
-  font-size: 9px;
-  letter-spacing: 4px;
-  color: var(--muted);
-  margin-top: 10px;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 38px;
-}
-
-nav a {
-  font-size: 11px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
-nav a:hover { color: var(--gold); }
-
-.header-button {
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  padding: 18px 25px;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.header-button:hover {
-  background: var(--gold);
-  color: var(--black);
-}
-
-.menu-toggle {
-  display: none;
-  background: none;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  padding: 10px;
-  font-size: 20px;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 745px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  padding: 85px 7.5%;
-
+.hero{
   background:
-    linear-gradient(90deg,
-      rgba(3,12,6,.96) 0%,
-      rgba(3,12,6,.82) 38%,
-      rgba(3,12,6,.25) 100%
-    ),
-    url('cannabis-hero.jpg') center center / cover no-repeat,
-    #102819;
+    radial-gradient(circle at 78% 42%,rgba(36,105,60,.55),transparent 55%),
+    radial-gradient(circle at 10% 100%,rgba(208,173,109,.10),transparent 45%),
+    linear-gradient(180deg,#040a06,#09150d);
+}
+.hero-leaf{
+  position:absolute;right:5%;top:50%;transform:translateY(-50%);
+  width:min(46vw,540px);height:min(40vw,460px);
+  color:var(--gold);opacity:.28;z-index:1;pointer-events:none;
+  filter:drop-shadow(0 0 30px rgba(208,173,109,.25));
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 720px;
+.hero h1 span{
+  background:linear-gradient(120deg,#f4e2b4,#d0ad6d 45%,#8d7038);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
 }
+.eyebrow{background:linear-gradient(90deg,#f4e2b4,#d0ad6d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 
-.eyebrow {
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 5px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+.btn{background:linear-gradient(120deg,#f0d9a3,#d0ad6d 55%,#a98a4c);border-color:#d0ad6d}
+.btn:hover{background:transparent;color:var(--gold)}
 
-.hero h1 {
-  font: 600 clamp(65px, 9vw, 125px)/.83 'Cormorant Garamond', serif;
-  letter-spacing: -3px;
-}
+.header{background:rgba(6,17,9,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 
-.hero h1 span { color: var(--gold); }
+.product-card{background:linear-gradient(160deg,#122418,#0a130d);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.product-card:hover{box-shadow:0 25px 60px rgba(208,173,109,.12)}
 
-.description {
-  margin: 35px 0;
-  max-width: 510px;
-  font-size: 15px;
-  line-height: 2;
-  color: #d0d2ca;
-}
+.gate-box{box-shadow:0 0 80px rgba(208,173,109,.12)}
 
-.main-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 25px;
-  padding: 23px 35px;
-  background: var(--gold);
-  color: #10150d;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  transition: .3s;
-}
-
-.main-button:hover {
-  background: transparent;
-  outline: 1px solid var(--gold);
-  color: var(--gold);
-}
-
-.tagline {
-  margin-top: 60px;
-  font-size: 10px;
-  letter-spacing: 5px;
-  color: #e1dfd5;
-}
-
-.green-house {
-  position: absolute;
-  right: 7%;
-  bottom: 12%;
-  width: 155px;
-  height: 155px;
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-  text-align: center;
-  font-size: 12px;
-  letter-spacing: 3px;
-  line-height: 1.6;
-}
-
-.green-house span {
-  font-size: 25px;
-  margin-bottom: 5px;
-}
-
-/* COLLECTION */
-
-.collection {
-  padding: 110px 8%;
-  text-align: center;
-  background: #0b1910;
-}
-
-.collection h2, .story h2, .contact h2 {
-  font: 600 clamp(40px, 6vw, 65px) 'Cormorant Garamond', serif;
-  margin-bottom: 45px;
-}
-
-.collection h2 span, .story h2 span, .contact h2 span {
-  color: var(--gold);
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-.products article {
-  min-height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  text-align: left;
-  padding: 30px;
-  border: 1px solid #40513d;
-  background: linear-gradient(145deg, #1c4229, #08140b);
-}
-
-.products h3 {
-  font: 600 32px 'Cormorant Garamond', serif;
-  color: var(--gold);
-}
-
-.products p {
-  color: var(--muted);
-  margin-top: 10px;
-}
-
-.notice {
-  color: var(--muted);
-  font-size: 11px;
-  margin-top: 30px;
-}
-
-.story, .contact {
-  padding: 110px 8%;
-  text-align: center;
-  background: #07110a;
-}
-
-.story > p:last-child {
-  color: var(--muted);
-  max-width: 600px;
-  margin: auto;
-  line-height: 2;
-}
-
-.contact { background: #10271a; }
-.contact .main-button { margin-top: 20px; }
-
-footer {
-  text-align: center;
-  padding: 40px 8%;
-  color: var(--gold);
-  font-size: 11px;
-  letter-spacing: 2px;
-}
-
-footer p {
-  color: var(--muted);
-  font-size: 10px;
-  letter-spacing: 0;
-  margin-top: 15px;
-  line-height: 1.7;
-}
-
-@media(max-width: 850px) {
-  .header { min-height: 90px; padding: 15px 5%; }
-  .brand-leaf { font-size: 30px; }
-  .brand-name { font-size: 21px; }
-  .brand small { font-size: 7px; letter-spacing: 2px; }
-  .menu-toggle { display: block; }
-  .header-button { display: none; }
-
-  nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #07110a;
-    padding: 30px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 25px;
-  }
-
-  nav.active { display: flex; }
-
-  .hero {
-    min-height: 680px;
-    padding: 70px 7%;
-    background-position: 58% center;
-  }
-
-  .hero h1 { font-size: clamp(60px, 13vw, 90px); }
-
-  .green-house {
-    width: 95px;
-    height: 95px;
-    right: 6%;
-    bottom: 7%;
-    font-size: 8px;
-  }
-
-  .products { grid-template-columns: 1fr; }
-  .collection, .story, .contact { padding: 75px 7%; }
+@media(max-width:800px){
+  .hero-leaf{right:-25%;width:95vw;height:80vw;opacity:.16}
 }
