@@ -1,84 +1,42 @@
 
-/* ==================================
-   THE DISPENSER — INTERACTIONS
-   ================================== */
-
-// VÉRIFICATION DE L'ÂGE
 
 const gate = document.getElementById("gate");
-const ageYes = document.getElementById("age-yes");
-const ageNo = document.getElementById("age-no");
+const yes = document.getElementById("age-yes");
+const no = document.getElementById("age-no");
 
-if (sessionStorage.getItem("td-age") === "yes") {
-  gate?.classList.add("hidden");
+try {
+  if (sessionStorage.getItem("td-age") === "yes") {
+    gate?.classList.add("hidden");
+  }
+} catch (error) {
+  console.warn("Session storage indisponible.");
 }
 
-ageYes?.addEventListener("click", () => {
-  sessionStorage.setItem("td-age", "yes");
+yes?.addEventListener("click", () => {
+  try {
+    sessionStorage.setItem("td-age", "yes");
+  } catch (error) {}
   gate?.classList.add("hidden");
 });
 
-ageNo?.addEventListener("click", () => {
-  const box = gate?.querySelector(".gatebox");
-
+no?.addEventListener("click", () => {
+  const box = gate?.querySelector(".gate-box");
   if (box) {
-    box.innerHTML = `
-      <div class="logo">THE <span>DISPENSER</span></div>
-      <h2>Accès refusé.</h2>
-      <p>Ce site est réservé aux personnes majeures.</p>
-    `;
+    box.innerHTML = "<h2>ACCÈS REFUSÉ</h2><p>Ce site est réservé aux personnes majeures.</p>";
   }
 });
 
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("main-nav");
 
-// MENU MOBILE
-
-const menuToggle = document.getElementById("menu-toggle");
-const mainNav = document.getElementById("main-nav");
-
-menuToggle?.addEventListener("click", () => {
-  const isOpen = mainNav.classList.toggle("active");
-
-  menuToggle.classList.toggle("active", isOpen);
-  menuToggle.setAttribute("aria-expanded", String(isOpen));
+toggle?.addEventListener("click", () => {
+  const opened = nav?.classList.toggle("active");
+  toggle.setAttribute("aria-expanded", String(Boolean(opened)));
 });
 
-mainNav?.querySelectorAll("a").forEach(link => {
+nav?.querySelectorAll("a").forEach(link => {
   link.addEventListener("click", () => {
-    mainNav.classList.remove("active");
-    menuToggle?.classList.remove("active");
-    menuToggle?.setAttribute("aria-expanded", "false");
+    nav.classList.remove("active");
+    toggle?.setAttribute("aria-expanded", "false");
   });
-});
-
-
-// ANIMATION AU DÉFILEMENT
-
-const animatedElements = document.querySelectorAll(
-  ".product, .values article, .section-heading, .story-content"
-);
-
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.12
-  });
-
-  animatedElements.forEach(element => {
-    element.classList.add("reveal");
-    observer.observe(element);
-  });
-}
-
-
-// ANNÉE AUTOMATIQUE
-
-document.querySelectorAll("[data-year]").forEach(element => {
-  element.textContent = new Date().getFullYear();
 });
