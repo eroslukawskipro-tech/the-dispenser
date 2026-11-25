@@ -4,312 +4,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#10291d">
-
-  <title>THE DISPENSER | Sélection CBD</title>
-  <meta name="description" content="THE DISPENSER — Une identité premium, une sélection soignée et une exigence de transparence.">
-
+  <meta name="theme-color" content="#08130e">
+  <meta name="description" content="THE DISPENSER — Une sélection CBD au caractère premium.">
+  <title>THE DISPENSER — Cannabis Culture</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <!-- VÉRIFICATION DE L'ÂGE -->
-  <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-    <div class="gatebox">
-      <div class="logo">THE <span>DISPENSER</span></div>
-
-      <p class="subtitle">ACCÈS RÉSERVÉ AUX ADULTES</p>
-      <h2 id="gate-title">Bienvenue.</h2>
-
-      <p>Ce site est destiné aux personnes âgées de 18 ans et plus.</p>
-
-      <button class="btn" id="age-yes">J'AI 18 ANS OU PLUS</button>
-      <button class="btn btn-secondary" id="age-no">NON</button>
-
-      <p class="gate-note">En continuant, vous confirmez être majeur.</p>
-    </div>
+  <div class="announcement">
+    THE DISPENSER — CBD CULTURE & PREMIUM SELECTION
   </div>
 
-  <!-- BARRE SUPÉRIEURE -->
-  <div class="topbar">
-    <p>THE DISPENSER — L'EXIGENCE DU DÉTAIL</p>
-  </div>
-
-  <!-- NAVIGATION -->
-  <header>
-    <a href="#accueil" class="logo" aria-label="THE DISPENSER, accueil">
-      THE <span>DISPENSER</span>
-    </a>
-
-    <button class="menu-toggle" id="menu-toggle"
-      aria-label="Ouvrir le menu" aria-expanded="false"
-      aria-controls="main-nav">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
+  <header class="header">
+    <a class="logo" href="#home">THE <span>DISPENSER</span><small>EST. 2026 · CBD CULTURE</small></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
     <nav id="main-nav">
-      <a href="#accueil">Accueil</a>
-      <a href="#boutique">Boutique</a>
-      <a href="#marque">La marque</a>
-      <a href="#engagements">Engagements</a>
-      <a href="#faq">FAQ</a>
+      <a href="#home">Accueil</a>
+      <a href="#collection">Collection</a>
+      <a href="#story">Notre univers</a>
       <a href="#contact">Contact</a>
     </nav>
+    <a class="header-link" href="#collection">DÉCOUVRIR ↗</a>
   </header>
 
   <main>
-
-    <!-- BANNIÈRE PRINCIPALE -->
-    <section class="hero" id="accueil">
-
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
       <div class="hero-content">
-        <p class="subtitle">L'UNIVERS THE DISPENSER</p>
-
-        <h1>
-          L'élégance<br>
-          <span>du naturel.</span>
-        </h1>
-
+        <p class="eyebrow">CANNABIS CULTURE · CBD SELECTION</p>
+        <h1>THE ART OF<br><span>GREEN.</span></h1>
         <p class="hero-description">
-          Une identité singulière, une sélection soignée
-          et une attention particulière portée à chaque détail.
+          Une identité. Une culture. Une sélection.
+          Découvrez l'univers THE DISPENSER.
         </p>
+        <a href="#collection" class="btn">EXPLORER L'UNIVERS <span>↗</span></a>
+        <p class="hero-caption">UNE AUTRE VISION DU CBD.</p>
+      </div>
+      <div class="hero-stamp">THE<br>GREEN<br>HOUSE</div>
+    </section>
 
-        <a href="#boutique" class="btn">
-          DÉCOUVRIR L'UNIVERS <span>→</span>
-        </a>
+    <section class="intro">
+      <p class="eyebrow">MORE THAN A PRODUCT</p>
+      <h2>Une culture.<br><span>Une signature.</span></h2>
+      <p>THE DISPENSER revendique un univers inspiré de la culture cannabis, avec une approche esthétique, exigeante et contemporaine.</p>
+    </section>
 
-        <div class="hero-signature">
-          <span>EST. 2026</span>
-          <span>•</span>
-          <span>THE DISPENSER</span>
+    <section class="collection" id="collection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE SELECTION</p>
+          <h2>Explorez nos <span>univers.</span></h2>
         </div>
+        <p>Une sélection à découvrir.</p>
       </div>
 
-      <div class="hero-art" aria-label="Emblème THE DISPENSER">
-        <div class="hero-art-frame">
-          <span class="hero-art-small">THE ART OF SELECTION</span>
-          <div class="hero-symbol">✳</div>
-          <strong>THE<br>DISPENSER</strong>
-          <span class="hero-art-bottom">SELECTED WITH CARE</span>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- BANDEAU VALEURS -->
-    <section class="qualities" aria-label="Nos engagements">
-      <div>
-        <span class="quality-icon">✧</span>
-        <p>Transparence</p>
-      </div>
-      <div>
-        <span class="quality-icon">◇</span>
-        <p>Traçabilité</p>
-      </div>
-      <div>
-        <span class="quality-icon">✳</span>
-        <p>Exigence</p>
-      </div>
-    </section>
-
-    <!-- BOUTIQUE -->
-    <section class="shop" id="boutique">
-
-      <div class="section-heading">
-        <p class="subtitle">DÉCOUVRIR NOTRE UNIVERS</p>
-        <h2>Nos <span>collections.</span></h2>
-        <p>Explorez les différentes catégories de notre catalogue.</p>
-      </div>
-
-      <div class="products">
-
-        <article class="product">
-          <div class="visual visual-flowers">
-            <span>01</span>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image flowers">
+            <span>01 / FLOWERS</span>
+            <b>FLOWERS</b>
           </div>
-          <div class="info">
-            <p class="product-category">COLLECTION 01</p>
-            <h3>Fleurs</h3>
-            <p>Une catégorie dédiée à notre sélection de fleurs.</p>
-            <span class="product-status">Bientôt disponible</span>
+          <div class="product-info">
+            <h3>Les fleurs</h3>
+            <p>Un univers végétal, des profils et des caractères différents.</p>
+            <span class="discover">DÉCOUVRIR ↗</span>
           </div>
         </article>
 
-        <article class="product">
-          <div class="visual visual-resins">
-            <span>02</span>
+        <article class="product-card">
+          <div class="product-image resins">
+            <span>02 / RESINS</span>
+            <b>RESINS</b>
           </div>
-          <div class="info">
-            <p class="product-category">COLLECTION 02</p>
-            <h3>Résines</h3>
-            <p>Découvrez notre univers de résines.</p>
-            <span class="product-status">Bientôt disponible</span>
-          </div>
-        </article>
-
-        <article class="product">
-          <div class="visual visual-oils">
-            <span>03</span>
-          </div>
-          <div class="info">
-            <p class="product-category">COLLECTION 03</p>
-            <h3>Huiles</h3>
-            <p>Une catégorie pour les références à venir.</p>
-            <span class="product-status">Bientôt disponible</span>
+          <div class="product-info">
+            <h3>Les résines</h3>
+            <p>Une sélection autour des textures et des traditions.</p>
+            <span class="discover">DÉCOUVRIR ↗</span>
           </div>
         </article>
 
-      </div>
-
-      <p class="catalogue-note">
-        Catalogue de présentation : aucune commande ni aucun paiement n'est activé.
-      </p>
-
-    </section>
-
-    <!-- MARQUE -->
-    <section class="story" id="marque">
-
-      <div class="story-content">
-        <p class="subtitle">NOTRE HISTOIRE</p>
-
-        <h2>
-          Une vision.<br>
-          <span>Une signature.</span>
-        </h2>
-
-        <p>
-          THE DISPENSER est un projet de marque imaginé autour
-          d'une identité visuelle forte, d'une présentation soignée
-          et d'une volonté de transparence.
-        </p>
-
-        <p>
-          Chaque détail compte : de l'univers graphique
-          à la présentation des produits.
-        </p>
-      </div>
-
-      <div class="story-signature">
-        <span>THE</span>
-        <strong>DISPENSER</strong>
-        <span>EST. 2026</span>
-      </div>
-
-    </section>
-
-    <!-- ENGAGEMENTS -->
-    <section class="engagements" id="engagements">
-
-      <div class="section-heading">
-        <p class="subtitle">NOS PRINCIPES</p>
-        <h2>Nos <span>engagements.</span></h2>
-      </div>
-
-      <div class="values">
-
-        <article>
-          <span>01</span>
-          <h3>Traçabilité</h3>
-          <p>Des informations d'origine et de lot à consulter pour chaque référence.</p>
+        <article class="product-card">
+          <div class="product-image oils">
+            <span>03 / EXTRACTS</span>
+            <b>OILS</b>
+          </div>
+          <div class="product-info">
+            <h3>Les huiles</h3>
+            <p>Un univers dédié aux produits CBD et à leur composition.</p>
+            <span class="discover">DÉCOUVRIR ↗</span>
+          </div>
         </article>
-
-        <article>
-          <span>02</span>
-          <h3>Transparence</h3>
-          <p>Une présentation claire des compositions et des analyses disponibles.</p>
-        </article>
-
-        <article>
-          <span>03</span>
-          <h3>Exigence</h3>
-          <p>Une attention portée à la sélection et à la présentation de chaque produit.</p>
-        </article>
-
       </div>
-
+      <p class="catalogue-note">Catalogue en préparation — disponibilité et conformité des produits à confirmer.</p>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-
-      <div class="section-heading">
-        <p class="subtitle">BESOIN D'INFORMATIONS ?</p>
-        <h2>Questions <span>fréquentes.</span></h2>
+    <section class="manifesto" id="story">
+      <div class="manifesto-image">
+        <span>THE DISPENSER</span>
       </div>
-
-      <details>
-        <summary>Qu'est-ce que THE DISPENSER ?</summary>
-        <p>THE DISPENSER est une marque en développement autour d'un univers premium.</p>
-      </details>
-
-      <details>
-        <summary>Le catalogue est-il ouvert ?</summary>
-        <p>Non, cette version est une maquette de présentation. Aucune vente n'est activée.</p>
-      </details>
-
-      <details>
-        <summary>Comment connaître la composition des produits ?</summary>
-        <p>Les informations de composition et les certificats d'analyse devront être consultables pour chaque référence commercialisée.</p>
-      </details>
-
-      <details>
-        <summary>Comment contacter la marque ?</summary>
-        <p>Vous pourrez nous contacter via les coordonnées qui seront ajoutées à la page contact.</p>
-      </details>
-
+      <div class="manifesto-content">
+        <p class="eyebrow">OUR IDENTITY</p>
+        <h2>Rooted in<br><span>cannabis culture.</span></h2>
+        <p>Plus qu'un nom, THE DISPENSER est une identité inspirée par l'esthétique cannabis, le design premium et le goût du détail.</p>
+        <p>Notre ambition : construire une marque reconnaissable, moderne et authentique.</p>
+        <a href="#contact" class="text-link">EN SAVOIR PLUS ↗</a>
+      </div>
     </section>
 
-    <!-- CONTACT -->
+    <section class="values">
+      <p class="eyebrow">THE DISPENSER STANDARD</p>
+      <h2>Notre vision.</h2>
+      <div class="value-grid">
+        <article><span>01</span><h3>IDENTITÉ</h3><p>Une esthétique forte et reconnaissable.</p></article>
+        <article><span>02</span><h3>SÉLECTION</h3><p>Une attention particulière à la traçabilité et à la qualité.</p></article>
+        <article><span>03</span><h3>TRANSPARENCE</h3><p>Des informations claires sur les produits et leur conformité.</p></article>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
-
-      <p class="subtitle">RESTONS EN CONTACT</p>
-
-      <h2>Une question ?<br><span>Échangeons.</span></h2>
-
-      <p>Pour toute demande concernant THE DISPENSER.</p>
-
-      <a href="mailto:contact@exemple.fr" class="btn">
-        NOUS CONTACTER ↗
-      </a>
-
+      <p class="eyebrow">STAY CONNECTED</p>
+      <h2>Welcome to<br><span>the green side.</span></h2>
+      <p>Une question sur notre univers ? Contactez notre équipe.</p>
+      <a class="btn" href="mailto:contact@thedispenser.fr">NOUS CONTACTER ↗</a>
     </section>
-
   </main>
 
-  <!-- FOOTER -->
   <footer>
-
-    <a href="#accueil" class="logo">
-      THE <span>DISPENSER</span>
-    </a>
-
-    <p class="footer-description">
-      Une identité. Une signature. Une exigence.
-    </p>
-
-    <div class="footer-links">
-      <a href="#marque">La marque</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2026 THE DISPENSER — Tous droits réservés.</p>
-      <p>Maquette de démonstration. Mentions légales, CGV et politique de confidentialité à compléter avant publication commerciale.</p>
-    </div>
-
+    <a class="logo" href="#home">THE <span>DISPENSER</span><small>CBD CULTURE</small></a>
+    <p>© 2026 THE DISPENSER — Tous droits réservés.</p>
+    <p class="legal">Site réservé aux adultes. Les produits présentés, lorsqu'ils seront commercialisés, devront respecter la réglementation française et européenne applicable. Aucun produit ne doit être considéré comme un médicament.</p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <div class="age-gate" id="gate">
+    <div class="gate-box">
+      <p class="eyebrow">THE DISPENSER</p>
+      <div class="gate-leaf">✳</div>
+      <h2>WELCOME TO<br><span>THE GREEN SIDE.</span></h2>
+      <p>Ce site est réservé aux personnes majeures. Confirmez-vous avoir 18 ans ou plus ?</p>
+      <button id="age-yes" class="btn">OUI, J'AI 18 ANS OU PLUS</button>
+      <button id="age-no" class="age-no">NON, QUITTER</button>
+      <small>CBD CULTURE · PREMIUM SELECTION</small>
+    </div>
+  </div>
 
 </body>
 </html>
